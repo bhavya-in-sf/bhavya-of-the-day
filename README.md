@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Things I'm Learning ✨
 
-## Getting Started
+Bhavya's personal learning-notes blog. Rebuilt from scratch after the
+original deployment's client-side navigation (clicking into past entries)
+was throwing a JS error and silently failing.
 
-First, run the development server:
+## What's here
 
-```bash
+- `lib/entries.ts` — all posts live here. Add a new entry to the **top**
+  of the `entries` array (newest first) and it shows up on the homepage
+  and in search automatically.
+- `app/page.tsx` — homepage: latest entry in full + list of past entries.
+- `app/entry/[slug]/page.tsx` — individual entry page, with working
+  Previous / Next links between entries (statically pre-rendered, no
+  client-router bug).
+- `components/SearchModal.tsx` — the ⌘K search over all entries.
+
+## Run locally
+
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push this repo to GitHub and connect it to the existing
+`bhavya-of-the-day` Vercel project (or `vercel --prod` from this folder
+if the Vercel CLI is set up) to redeploy to the same URL.
