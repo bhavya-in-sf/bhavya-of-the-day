@@ -10,6 +10,22 @@ export type Entry = {
 // Newest first. Add new entries to the TOP of this array.
 export const entries: Entry[] = [
   {
+    slug: "hofstede-software-of-the-mind",
+    title: "What Hofstede Taught Me About the Software Running in All of Us",
+    date: "2026-09-12",
+    category: "Culture & identity",
+    icon: "✨",
+    paragraphs: [
+      `I've been reading Hofstede's "Cultures and Organizations: Software of the Mind," and the central metaphor stuck with me before I even agreed with it: your mind runs on software installed early, mostly between birth and age twelve, and most of what you call your personality is really just code you didn't choose.`,
+      `I buy the timing part. The deepest layer, values, honesty, faith, what counts as right and wrong, gets written early, at home and at school, more than from any wider social circle. But I don't think that code is frozen the way the book implies. You keep patching it. Every diverse group I've worked in, every culture I've actually lived inside instead of just visited, has added a line or two. I don't think the core is fixed so much as it's slow to move, which is a different claim.`,
+      `Where the book got me completely is the layer above values, practices. Rituals stay remarkably stable. I still pray to the same deities, still celebrate the same festivals, still practice my values the way I was raised to, even now, thousands of miles from where I learned them. But the outer layer, symbols, words, slang, gestures, that's the part I've watched myself actively trade in and out. My gestures aren't purely mine anymore. Half of them are borrowed, picked up from rooms I sat in, people I worked with, cultures I only touched for a season. I like that about myself. Every group I'm in has something I want to steal, a phrase, a habit, a way of holding a conversation, and I take it on purpose.`,
+      `The line that actually moved me: mental programming isn't just what you're taught, it's a continuous process that folds in your genes and everything you learn along the way, forever, not just in the first twelve years. That's the whole argument for cultural intelligence, actually. If the software keeps updating, staying closed off to other ways of living isn't just narrow, it's leaving updates on the table. Every culture I've let in has unlocked something I couldn't have reached staying inside my own.`,
+      `Here's where I push back, though. Hofstede treats values as the fixed core, the thing practices orbit around but never touch. I don't buy that as absolute. I think you can take in a genuinely new value, not just a new practice, and let it replace an old one, if you meet the right person or the right place at the right time. Not a rewrite of the whole system, that would be dishonest to how identity actually works, but a real edit to the core, not just the shell around it.`,
+      `Software of the mind, sure. I just don't think anyone ships version 1.0 and runs it unpatched for life.`,
+      `Source: Hofstede, Hofstede & Minkov, "Cultures and Organizations: Software of the Mind," 3rd ed.`,
+    ],
+  },
+  {
     slug: "transformers",
     title: "Transformers",
     date: "2026-09-11",
