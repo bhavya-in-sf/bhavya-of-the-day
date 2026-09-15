@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import SmileLoader from "@/components/SmileLoader";
 import "./globals.css";
 
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col bg-white text-neutral-800">
         <SmileLoader />
         {children}
+        <Analytics />
       </body>
     </html>
   );
