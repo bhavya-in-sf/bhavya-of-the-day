@@ -3,14 +3,20 @@ import SearchModal from "./SearchModal";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between border-b border-neutral-100 px-6 py-4 sm:px-10">
-      <Link
-        href="/"
-        className="text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors"
-      >
-        Home
-      </Link>
-      <SearchModal />
-    </header>
+    <>
+      <div className="marquee">
+        {Array(12).fill("THINGS I'M LEARNING  ·  SF SHORTLISTED").join("  ·  ")}
+      </div>
+      <header className="site-header">
+        <Link href="/" className="site-brand">
+          bhavya<span>of the day</span>
+        </Link>
+        <nav className="site-nav">
+          <Link href="/">Notes</Link>
+          <Link href="/newsletter">Newsletter</Link>
+          <SearchModal />
+        </nav>
+      </header>
+    </>
   );
 }

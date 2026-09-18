@@ -127,14 +127,15 @@ export default function SmileLoader() {
           position: fixed;
           inset: 0;
           z-index: 99999;
-          background: #ffffff;
+          background: #f6f1e7;
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: var(--font-poppins), "Helvetica Neue", Arial, sans-serif;
-          font-weight: 600;
+          font-family: var(--font-instrument), Georgia, serif;
+          font-style: italic;
+          font-weight: 400;
           font-size: clamp(40px, 6vw, 96px);
-          color: #111111;
+          color: #1f4d2e;
           letter-spacing: -0.01em;
           opacity: 1;
           transition: opacity 0.45s ease;
@@ -156,7 +157,7 @@ export default function SmileLoader() {
           will-change: transform, opacity;
         }
         .open {
-          color: #8a8a8a;
+          color: #e8a317;
         }
         .colon {
           opacity: 0;

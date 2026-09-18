@@ -43,24 +43,17 @@ export default function SearchModal() {
 
   return (
     <>
-      <button
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 text-sm text-neutral-400 hover:text-neutral-600 transition-colors"
-        aria-label="Search entries"
-      >
-        Find
-        <kbd className="rounded border border-neutral-200 px-1.5 py-0.5 text-xs text-neutral-400">
-          ⌘K
-        </kbd>
+      <button onClick={() => setOpen(true)} aria-label="Search entries" style={{ background: "none", border: 0, cursor: "pointer" }}>
+        Find<kbd className="kbd">⌘K</kbd>
       </button>
 
       {open && (
         <div
-          className="fixed inset-0 z-50 flex items-start justify-center bg-black/20 px-4 pt-24"
+          className="search-overlay"
           onClick={() => setOpen(false)}
         >
           <div
-            className="w-full max-w-md rounded-xl border border-neutral-200 bg-white shadow-xl"
+            className="search-box"
             onClick={(e) => e.stopPropagation()}
           >
             <input
@@ -68,27 +61,16 @@ export default function SearchModal() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search entries..."
-              className="w-full border-b border-neutral-100 px-4 py-3 text-sm outline-none placeholder:text-neutral-400"
             />
-            <ul className="max-h-80 overflow-y-auto py-2">
+            <ul>
               {results.length === 0 && (
-                <li className="px-4 py-3 text-sm text-neutral-400">
-                  No entries found.
-                </li>
+                <li className="search-empty">No entries found.</li>
               )}
               {results.map((e) => (
                 <li key={e.slug}>
-                  <button
-                    onClick={() => go(e.slug)}
-                    className="flex w-full items-center justify-between px-4 py-2.5 text-left text-sm hover:bg-neutral-50"
-                  >
-                    <span className="flex items-center gap-2">
-                      <span>{e.icon}</span>
-                      <span>{e.title}</span>
-                    </span>
-                    <span className="text-xs text-neutral-400">
-                      {formatDate(e.date)}
-                    </span>
+                  <button onClick={() => go(e.slug)}>
+                    <span className="t">{e.title}</span>
+                    <span className="d">{formatDate(e.date)}</span>
                   </button>
                 </li>
               ))}

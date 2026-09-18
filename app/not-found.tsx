@@ -5,14 +5,13 @@ export default function NotFound() {
   return (
     <>
       <Header />
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col items-start justify-center px-6 py-16 sm:px-10">
-        <p className="text-sm text-neutral-400">That entry doesn&rsquo;t exist.</p>
-        <Link
-          href="/"
-          className="mt-3 text-sm text-neutral-600 underline hover:text-neutral-900"
-        >
-          Back home
-        </Link>
+      <main className="notes-main">
+        <div className="notes-frame" style={{ marginTop: 0, textAlign: "center" }}>
+          <p className="notes-title">Not on the shortlist.</p>
+          <p className="notes-eb" style={{ marginTop: 12 }}>
+            <Link href="/" style={{ color: "var(--forest)" }}>Back home</Link>
+          </p>
+        </div>
       </main>
     </>
   );
